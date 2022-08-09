@@ -11,7 +11,7 @@ class ProductPage(BasePage):
         book_name = self.browser.find_element(*ProductPageLocators.BOOK_NAME).text
         assert book_name == book_name_in_basket
 
-    def should_be_book_price_equals_basket_price(self):
+    def should_be_book_price_equal_basket_price(self):
         price_in_basket = self.browser.find_element(*ProductPageLocators.PRICE_IN_BASKET).text
         book_price = self.browser.find_element(*ProductPageLocators.BOOK_PRICE).text
         assert book_price == price_in_basket
